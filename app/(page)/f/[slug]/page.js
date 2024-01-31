@@ -94,7 +94,7 @@ export default function Page({ params }) {
                             <Link href="/" > Эхлэл </Link>
                         </li>
                         {parent && <li className="breadcrumb-item">
-                            <Link href={`/p/${parent.slug}`} > {parent[langCheck(parent)].name} </Link>
+                            <Link href={`/f/${parent.slug}`} > {parent[langCheck(parent)].name} </Link>
                         </li>}
                     </ul>
                 </div>
@@ -114,7 +114,7 @@ export default function Page({ params }) {
                             <Link href="/" > Эхлэл </Link>
                         </li>
                         {parent && <li className="breadcrumb-item">
-                            <Link href={`/p/${parent.slug}`} > {parent[langCheck(parent)].name} </Link>
+                            <Link href={`/f/${parent.slug}`} > {parent[langCheck(parent)].name} </Link>
                         </li>}
                     </ul>
                 </div>
@@ -134,7 +134,7 @@ export default function Page({ params }) {
                         <Link href="/" > Эхлэл </Link>
                     </li>
                     {parent && <li className="breadcrumb-item">
-                        <Link href={`/p/${parent.slug}`} > {parent[langCheck(parent)].name} </Link>
+                        <Link href={`/f/${parent.slug}`} > {parent[langCheck(parent)].name} </Link>
                     </li>}
                     <li className="breadcrumb-item active">
                         {page[langCheck(page)].name}
@@ -259,7 +259,7 @@ export default function Page({ params }) {
                                         {childeMenus &&
                                             childeMenus.map((el) => {
                                                 let link;
-                                                if (!el.isDirect && !el.model) link = `/p/${el.slug}`;
+                                                if (!el.isDirect && !el.model) link = `/f/${el.slug}`;
                                                 if (el.isDirect) link = el.direct;
                                                 if (el.model) link = el.model;
                                                 return (
@@ -296,7 +296,7 @@ export default function Page({ params }) {
                                 <ul className="side-menus">
                                     {sameParentMenus && sameParentMenus.map(menu => {
                                         let link;
-                                        if (!menu.isDirect && !menu.model) link = `/p/${menu.slug}`;
+                                        if (!menu.isDirect && !menu.model) link = `/f/${menu.slug}`;
                                         if (menu.isDirect) link = menu.direct;
                                         if (menu.model) link = menu.model;
                                         return <li className="side-menu" key={menu._id + "same"}> <Link href={link} > {menu[langCheck(menu)].name}</Link></li>
@@ -312,7 +312,7 @@ export default function Page({ params }) {
                                 <ul className="side-menus">
                                     {childeMenus && childeMenus.map(menu => {
                                         let link;
-                                        if (!menu.isDirect && !menu.model) link = `/p/${menu.slug}`;
+                                        if (!menu.isDirect && !menu.model) link = `/f/${menu.slug}`;
                                         if (menu.isDirect) link = menu.direct;
                                         if (menu.model) link = menu.model;
                                         return <li className="side-menu" key={menu._id + "side"}> <Link href={link} > {menu[langCheck(menu)].name}</Link></li>
