@@ -1890,6 +1890,50 @@ table th {
 }
 
 /* -------------------------------
+------------ Not found  ----------
+------------------------------- */
+
+.notFound {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+  color: #1f1f1f;
+}
+
+.notFound svg,
+.notFound i {
+  width: 45px;
+  font-size: 45px;
+  color: #b6b6b6;
+  margin-bottom: 20px;
+}
+
+.notFound h2 {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #1b1b1b;
+  margin: 0px;
+  padding: 0px; 
+}
+
+.notFound p {
+  font-size: 14px;
+  margin: 0px;
+}
+
+.notFound a {
+  margin-top: 35px;
+  padding: 7px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #141212;
+}
+
+/* -------------------------------
 ------------- Responsive  ------------
 ------------------------------- */
 

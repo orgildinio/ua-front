@@ -150,7 +150,7 @@ export default function Page({ params }) {
                 <div className="row">
                     <div className={sideStyle}>
                         <div className="page-main">
-                            {page[langCheck(page)].pageInfo.trim() &&
+                            {page[langCheck(page)].pageInfo &&
                                 <div className="page-header">
                                     <div className="page-title">
                                         <h2>  {page[langCheck(page)].name} </h2>
