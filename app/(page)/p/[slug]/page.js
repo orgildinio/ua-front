@@ -229,7 +229,7 @@ export default function Page({ params }) {
 
                                     </div>
                                     <div className="section-title-line"></div>
-                                    <div className="row">
+                                    <div className="row g-4">
                                         {position &&
                                             position.map((el, index) => (<Team memberData={el} />))}
 
@@ -252,7 +252,7 @@ export default function Page({ params }) {
 
                                 </div>
                                     <div className="section-title-line"></div>
-                                    <div className="row">
+                                    <div className="row g-4">
 
 
                                         {childeMenus &&
