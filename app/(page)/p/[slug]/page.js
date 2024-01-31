@@ -158,6 +158,28 @@ export default function Page({ params }) {
                                     <div className="section-title-line"></div>
                                 </div>
                             }
+                            <div className="page-picture">
+                                {page.pictures && page.pictures.length == 1 && <img src={`${base.cdnUrl}/${page.pictures[0]}`} className="page-full-image" />}
+                                {page.pictures && page.pictures.length > 1 &&
+                                    <Swiper modules={[Navigation]}
+                                        autoHeight={true}
+                                        navigation={{
+                                            prevEl: ".page-view-slider-prev",
+                                            nextEl: ".page-view-slider-next",
+                                        }}
+                                        className="page-view-slider">
+                                        {page.pictures.map((pic, index) =>
+                                            <SwiperSlide className="page-slide" key={index + "_view"}>
+                                                <img src={`${base.cdnUrl}/${pic}`} />
+                                            </SwiperSlide>
+                                        )}
+                                        <div className="page-view-slide-nav">
+                                            <div className="page-view-slider-prev swiper-button-prev"></div>
+                                            <div className="page-view-slider-next swiper-button-next"></div>
+                                        </div>
+                                    </Swiper>
+                                }
+                            </div>
                             <div className="page-desiption">
                                 <div
                                     dangerouslySetInnerHTML={{
@@ -189,28 +211,7 @@ export default function Page({ params }) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="page-picture">
-                                {page.pictures && page.pictures.length == 1 && <img src={`${base.cdnUrl}/${page.pictures[0]}`} className="page-full-image" />}
-                                {page.pictures && page.pictures.length > 1 &&
-                                    <Swiper modules={[Navigation]}
-                                        autoHeight={true}
-                                        navigation={{
-                                            prevEl: ".page-view-slider-prev",
-                                            nextEl: ".page-view-slider-next",
-                                        }}
-                                        className="page-view-slider">
-                                        {page.pictures.map((pic, index) =>
-                                            <SwiperSlide className="page-slide" key={index + "_view"}>
-                                                <img src={`${base.cdnUrl}/${pic}`} />
-                                            </SwiperSlide>
-                                        )}
-                                        <div className="page-view-slide-nav">
-                                            <div className="page-view-slider-prev swiper-button-prev"></div>
-                                            <div className="page-view-slider-next swiper-button-next"></div>
-                                        </div>
-                                    </Swiper>
-                                }
-                            </div>
+
 
 
                             {position && position.length > 0 &&
