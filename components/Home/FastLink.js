@@ -31,7 +31,7 @@ const FastLink = () => {
                     } else lang = cookies.language;
                     let count = 0.2 * index;
                     let link = "#";
-                    if (el.direct && !el.oldDirect) {
+                    if (el.direct) {
                         link = el.direct;
                     }
                     return (
