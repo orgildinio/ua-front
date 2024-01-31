@@ -33,8 +33,6 @@ const FastLink = () => {
                     let link = "#";
                     if (el.direct && !el.oldDirect) {
                         link = el.direct;
-                    } else if (el.oldDirect) {
-                        link = el.oldDirect;
                     }
                     return (
 
