@@ -17,7 +17,7 @@ import { usePathname } from "next/navigation";
 import NotFound from "components/General/Notfound";
 import Side from "components/General/Side";
 import Spinner from "components/General/Spinner";
-import { getSlugMenu, } from "lib/getFetchers"
+import { getSlugMenu, getSlugFooterMenu } from "lib/getFetchers"
 import base from "lib/base";
 import Team from "components/Team/team";
 
@@ -63,7 +63,7 @@ export default function Page({ params }) {
 
         const fetchDatas = async () => {
             try {
-                const { menu, parent, page, childeMenus, sameParentMenus, position } = await getSlugMenu(params.slug);
+                const { menu, parent, page, childeMenus, sameParentMenus, position } = await getSlugFooterMenu(params.slug);
                 if (page && page.length > 0) {
                     setPage(page[0]);
                     page[0].sideActive == false && setSideStyle('col-xl-12 col-lg-12 col-md-12')
