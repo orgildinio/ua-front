@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
     }
 
     if (page && page[0]) {
-        title = page[0]['mn'].name + title;
+        title = page[0]['mn'].name + " - " + title;
     }
 
 
