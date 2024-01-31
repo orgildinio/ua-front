@@ -109,7 +109,7 @@ const TopNews = () => {
                                 <div className="top-news-box-dtls">
                                     <div className="top-news-box-ctgrs">
                                         {el.categories && el.categories.map(cat =>
-                                            <Link href={`/news?category=${cat._id}`} className="top-news-box-cat" key={cat._id + 'tcat'}>  {cat[langCheck(cat)].name} </Link>
+                                            <Link href={`/news?categories=${cat.slug}`} className="top-news-box-cat" key={cat._id + 'tcat'}>  {cat[langCheck(cat)].name} </Link>
                                         )}
                                     </div>
                                     <Link href={`/post/${el.slug}`} className="top-news-title">
@@ -161,7 +161,7 @@ const TopNews = () => {
                                         <div className="new-news-categories">
                                             {el.categories && el.categories[0] && (
                                                 <div className={`new-news-category`}>
-                                                    <Link href={`/news?category=${el.slug}`}>
+                                                    <Link href={`/news?categories=${el.categories[0].slug}`}>
                                                         {el.categories[0][langCheck(el.categories[0])].name}
                                                     </Link>
                                                 </div>
