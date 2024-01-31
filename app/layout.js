@@ -51,13 +51,21 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-B2E3N5ZCZQ"></Script>
-        <Script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date());
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-B2E3N5ZCZQ', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
 
-          gtag('config', 'G-B2E3N5ZCZQ');
-        </Script>
       </head>
       <html lang="en">
         <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -41,7 +41,7 @@ export default async function Page() {
         <section className="section section-page">
 
             <div className="container">
-                <Contact />
+                {/* <Contact /> */}
             </div>
         </section> </>
 }
